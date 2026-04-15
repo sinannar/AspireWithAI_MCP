@@ -1,0 +1,6 @@
+{
+  "appHost": {
+    "language": "csharp",
+    "path": "AspireWithAI.AppHost/AspireWithAI.AppHost.csproj"
+  }
+}

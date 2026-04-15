@@ -1,4 +1,6 @@
 <Solution>
   <Project Path="AspireWithAI.Api/AspireWithAI.Api.csproj" />
+  <Project Path="AspireWithAI.AppHost/AspireWithAI.AppHost.csproj" />
   <Project Path="AspireWithAI.Mcp/AspireWithAI.Mcp.csproj" />
+  <Project Path="AspireWithAI.ServiceDefaults/AspireWithAI.ServiceDefaults.csproj" />
 </Solution>
