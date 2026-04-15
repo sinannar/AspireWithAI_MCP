@@ -1,0 +1,6 @@
+@AspireWithAI.Mcp_HostAddress = http://localhost:5123
+
+GET {{AspireWithAI.Mcp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

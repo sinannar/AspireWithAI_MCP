@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="AspireWithAI.Api/AspireWithAI.Api.csproj" />
+  <Project Path="AspireWithAI.Mcp/AspireWithAI.Mcp.csproj" />
+</Solution>
