@@ -42,7 +42,7 @@ From the repository root:
 
 ```bash
 dotnet restore AspireWithAI.slnx
-dotnet run --project /home/runner/work/AspireWithAI_MCP/AspireWithAI_MCP/AspireWithAI.AppHost/AspireWithAI.AppHost.csproj
+dotnet run --project ./AspireWithAI.AppHost/AspireWithAI.AppHost.csproj
 ```
 
 Then:
