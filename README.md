@@ -32,9 +32,16 @@ The demo shows how to:
 ## Prerequisites
 
 - .NET SDK 10
-- Aspire workload/tooling supported by your SDK
+- Aspire CLI
 - A GitHub account with access to GitHub Models
-- A GitHub token with permissions to call GitHub Models (set as environment variable, e.g. `GITHUB_TOKEN`)
+- A GitHub token with permissions to call GitHub Models
+
+Verify the tools:
+
+```bash
+dotnet --version
+aspire --version
+```
 
 ## Run Locally
 
@@ -42,6 +49,13 @@ From the repository root:
 
 ```bash
 dotnet restore AspireWithAI.slnx
+dotnet user-secrets set Parameters:chat-gh-apikey "<YOUR_GITHUB_MODELS_TOKEN>" --project ./AspireWithAI.AppHost/AspireWithAI.AppHost.csproj
+aspire run
+```
+
+Alternative (without Aspire CLI command):
+
+```bash
 dotnet run --project ./AspireWithAI.AppHost/AspireWithAI.AppHost.csproj
 ```
 
@@ -56,6 +70,21 @@ GET /weatherforecast
 ```
 
 The API response includes AI-generated weather descriptions produced through MCP tools.
+
+## What to Expect
+
+- The API creates a chat agent (`weatheragent`) backed by GitHub Models.
+- The agent discovers MCP tools from the MCP server (`/mcp`) and invokes them during response generation.
+- Response text includes multilingual output (including English and Turkish), matching the demo setup.
+
+## Aspire Dashboard / Trace View
+
+You can inspect GenAI traces and MCP tool calls in the Aspire dashboard:
+
+![Aspire dashboard services](https://raw.githubusercontent.com/sinannar/sinannar.github.io/refs/heads/main/public/007/ss-01.png)
+![Weatherforecast endpoint result](https://raw.githubusercontent.com/sinannar/sinannar.github.io/refs/heads/main/public/007/ss-02.png)
+![Trace details with model and tool execution](https://raw.githubusercontent.com/sinannar/sinannar.github.io/refs/heads/main/public/007/ss-04.png)
+![Tool calls and tool outputs](https://raw.githubusercontent.com/sinannar/sinannar.github.io/refs/heads/main/public/007/ss-07.png)
 
 ## Notes
 
