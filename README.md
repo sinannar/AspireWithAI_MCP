@@ -53,6 +53,8 @@ dotnet user-secrets set Parameters:chat-gh-apikey "<YOUR_GITHUB_MODELS_TOKEN>" -
 aspire run
 ```
 
+`Parameters:chat-gh-apikey` is the AppHost secret key used by the `chat` GitHub Model resource in this solution.
+
 Alternative (without Aspire CLI command):
 
 ```bash
@@ -79,12 +81,9 @@ The API response includes AI-generated weather descriptions produced through MCP
 
 ## Aspire Dashboard / Trace View
 
-You can inspect GenAI traces and MCP tool calls in the Aspire dashboard:
-
-![Aspire dashboard services](https://raw.githubusercontent.com/sinannar/sinannar.github.io/refs/heads/main/public/007/ss-01.png)
-![Weatherforecast endpoint result](https://raw.githubusercontent.com/sinannar/sinannar.github.io/refs/heads/main/public/007/ss-02.png)
-![Trace details with model and tool execution](https://raw.githubusercontent.com/sinannar/sinannar.github.io/refs/heads/main/public/007/ss-04.png)
-![Tool calls and tool outputs](https://raw.githubusercontent.com/sinannar/sinannar.github.io/refs/heads/main/public/007/ss-07.png)
+You can inspect GenAI traces and MCP tool calls in the Aspire dashboard.
+For the full screenshot walkthrough (dashboard, trace details, tool calls, and outputs), see the blog post:
+https://sinannar.github.io/blog/007-globalazure2026/
 
 ## Notes
 
